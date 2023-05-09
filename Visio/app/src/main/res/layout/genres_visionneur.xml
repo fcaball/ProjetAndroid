@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#A4FF84 "
+        android:backgroundTint="#A4FF84"
+        android:padding="5dp"
+        android:text="Bienvenue chez Visio"
+        android:textColor="#1C9391 "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Afin de vous proposer du contenu adapté"
+        android:textAlignment="center"
+        android:textColor="#1C9391"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Veuillez sélectionner 3 genres afin de vous proposer du contenu adapté"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <CheckBox
+        android:id="@+id/genre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:buttonTint="#000000"
+        android:text="Genre1"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info" />
+
+    <CheckBox
+        android:id="@+id/genre2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#000000"
+        android:text="Genre2"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/genre1"
+        app:layout_constraintTop_toBottomOf="@+id/genre1" />
+
+    <CheckBox
+        android:id="@+id/genre3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#000000"
+        android:text="Genre3"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/genre2"
+        app:layout_constraintTop_toBottomOf="@+id/genre2" />
+
+    <CheckBox
+        android:id="@+id/genre4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#000000"
+        android:text="Genre4"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/genre3"
+        app:layout_constraintTop_toBottomOf="@+id/genre3" />
+
+    <CheckBox
+        android:id="@+id/genre5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#000000"
+        android:text="Genre5"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/genre4"
+        app:layout_constraintStart_toStartOf="@+id/genre4"
+        app:layout_constraintTop_toBottomOf="@+id/genre4" />
+
+    <CheckBox
+        android:id="@+id/genre6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#000000"
+        android:text="Genre6"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/genre5"
+        app:layout_constraintTop_toBottomOf="@+id/genre5" />
+
+    <CheckBox
+        android:id="@+id/autre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#000000"
+        android:text="Autre"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/genre6"
+        app:layout_constraintTop_toBottomOf="@+id/genre6" />
+
+    <Button
+        android:id="@+id/continuV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#D9D9D9"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Continuer"
+        android:textAllCaps="false"
+        android:textColor="#1C9391"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

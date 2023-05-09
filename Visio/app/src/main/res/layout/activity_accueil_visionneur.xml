@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contrainte"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Accueils.AccueilVisionneur">
+
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="35dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
+        app:srcCompat="@drawable/maison" />
+
+    <Button
+        android:id="@+id/buttonFilm"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:backgroundTint="#ECE7E7"
+        android:text="FILMS"
+        android:textColor="#989595"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSerie"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+
+    <Button
+        android:id="@+id/buttonSerie"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#ECE7E7"
+        android:text="SÉRIES"
+        android:textColor="#989595"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonFilm"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAnime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonFilm"
+        app:layout_constraintTop_toTopOf="@+id/buttonFilm" />
+
+    <Button
+        android:id="@+id/buttonAnime"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#ECE7E7"
+        android:text="ANIMÉS"
+        android:textColor="#989595"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSerie"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCM"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonSerie"
+        app:layout_constraintTop_toTopOf="@+id/buttonSerie" />
+
+    <Button
+        android:id="@+id/buttonCM"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#ECE7E7"
+        android:text="COURTS- MÉTRAGES"
+        android:textColor="#989595"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAnime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonAnime"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+        android:id="@+id/sep"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:background="#1C9391"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSerie">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/listevisionnage"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:background="#ECE7E7"
+        android:text="LISTE DE VISIONNAGE"
+        android:textAlignment="center"
+        android:textColor="#989595"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.app.visio.Header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

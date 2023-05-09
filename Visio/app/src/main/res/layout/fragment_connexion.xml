@@ -19,6 +19,7 @@
         android:textColor="#1C9391"
         app:layout_constraintBottom_toBottomOf="@+id/seconnecter"
         app:layout_constraintEnd_toStartOf="@+id/seconnecter"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -37,8 +38,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="303dp"
         android:background="#1C9391"
         android:paddingBottom="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,11 +48,11 @@
         app:layout_constraintTop_toBottomOf="@+id/seconnecter">
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/login"
             android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="64dp"
             android:layout_marginEnd="8dp"
             android:background="#ECE7E7"
             android:ems="10"
@@ -65,7 +66,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/mdp"
             android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_marginStart="8dp"
@@ -74,26 +75,26 @@
             android:background="#ECE7E7"
             android:ems="10"
             android:hint="MOT DE PASSE *"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textPassword"
             android:paddingStart="5dp"
             android:textColor="#000000"
             android:textColorHint="#989595"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+            app:layout_constraintTop_toBottomOf="@+id/login" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/listevisionnage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="champ obligatoire (*)"
             android:textColor="#FFFFFF"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+            app:layout_constraintStart_toStartOf="@+id/mdp"
+            app:layout_constraintTop_toBottomOf="@+id/mdp" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/continuer"
             android:layout_width="0dp"
             android:layout_height="34dp"
             android:layout_marginStart="64dp"
@@ -110,7 +111,36 @@
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/listevisionnage" />
+
+        <TextView
+            android:id="@+id/ErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nom d'utilisateur ou de mot de passe incorrect"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:foregroundTint="#D4FFC5"
+            android:indeterminateTint="#D4FFC5"
+            android:progressBackgroundTint="#D4FFC5"
+            android:progressTint="#D4FFC5"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/continuer"
+            app:layout_constraintTop_toBottomOf="@+id/listevisionnage" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

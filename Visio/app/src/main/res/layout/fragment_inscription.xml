@@ -18,6 +18,7 @@
         android:shadowColor="#00FFFFFF"
         android:text="S'INSCRIRE"
         android:textColor="#1C9391"
+        app:layout_constraintEnd_toStartOf="@+id/seconnecter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/login"
             android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_marginStart="8dp"
@@ -60,7 +61,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/mdp"
             android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_marginStart="8dp"
@@ -69,32 +70,33 @@
             android:background="#ECE7E7"
             android:ems="10"
             android:hint="MOT DE PASSE *"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textPassword"
             android:paddingStart="5dp"
             android:textColor="#000000"
             android:textColorHint="#989595"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+            app:layout_constraintTop_toBottomOf="@+id/login" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/listevisionnage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="champ obligatoire (*)"
             android:textColor="#FFFFFF"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+            app:layout_constraintStart_toStartOf="@+id/mdp"
+            app:layout_constraintTop_toBottomOf="@+id/mdp" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/continuer"
             android:layout_width="0dp"
             android:layout_height="34dp"
             android:layout_marginStart="64dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="64dp"
             android:background="#ECE7E7"
+            android:onClick="onClickContinuer"
             android:paddingStart="15dp"
             android:paddingLeft="0dp"
             android:paddingTop="0dp"
@@ -105,7 +107,35 @@
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/listevisionnage" />
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="36dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="32dp"
+            android:foregroundTint="#D4FFC5"
+            android:indeterminateTint="#D4FFC5"
+            android:progressBackgroundTint="#D4FFC5"
+            android:progressTint="#D4FFC5"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/continuer"
+            app:layout_constraintTop_toBottomOf="@+id/listevisionnage" />
+
+        <TextView
+            android:id="@+id/ErrorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Ce nom d'utilisateur est incorrect"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/continuer" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -115,11 +145,12 @@
         android:background="#D4FFC5"
         android:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sinscrire">
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/mail"
             android:layout_width="0dp"
             android:layout_height="37dp"
             android:layout_marginTop="24dp"
@@ -127,17 +158,17 @@
             android:background="#ECE7E7"
             android:ems="10"
             android:hint="ADRESSE E-MAIL *"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textEmailAddress"
             android:paddingStart="5dp"
             android:textColor="#000000"
             android:textColorHint="#989595"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+            app:layout_constraintStart_toStartOf="@+id/dtn"
+            app:layout_constraintTop_toBottomOf="@+id/dtn" />
 
         <EditText
             android:id="@+id/nom"
-            android:layout_width="161dp"
+            android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
@@ -145,7 +176,7 @@
             android:backgroundTint="#ECE7E7"
             android:ems="10"
             android:hint="NOM *"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textEmailSubject"
             android:paddingStart="5dp"
             android:textColor="#000000"
             android:textColorHint="#989595"
@@ -154,9 +185,10 @@
             tools:ignore="HardcodedText" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="179dp"
+            android:id="@+id/prenom"
+            android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="8dp"
             android:background="#ECE7E7"
@@ -168,50 +200,69 @@
             android:textColor="#000000"
             android:textColorHint="#989595"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nom"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/dtn"
             android:layout_width="0dp"
-            android:layout_height="33dp"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:background="#ECE7E7"
             android:ems="10"
             android:hint="DATE DE NAISSANCE"
-            android:inputType="textPersonName"
+            android:inputType="date"
             android:paddingStart="5dp"
             android:textColor="#000000"
             android:textColorHint="#989595"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/prenom" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mail">
+
+            <RadioButton
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:buttonTint="#000000"
+                android:text="VIDÉASTE"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#000000"
+                android:text="VISIONNEUR"
+                android:textColor="#000000" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/errormessageforcheckboxes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:buttonTint="#000000"
-            android:text="VISIONNEUR"
-            android:textColor="#000000"
-            app:buttonIconTint="#000000"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="24dp"
-            android:buttonTint="#000000"
-            android:text="VIDÉASTE"
-            android:textColor="#000000"
-            app:buttonIconTint="#000000"
-            app:layout_constraintStart_toEndOf="@+id/checkBox"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+            android:text="Une case doit être cochée"
+            android:textColor="#FF0000"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/continu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#D9D9D9"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Continuer"
+        android:textAllCaps="false"
+        android:textColor="#1C9391"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnkdn" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Comment pourrons nous vous suivre ?"
+        android:textAlignment="center"
+        android:textColor="#1C9391"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#A4FF84 "
+        android:backgroundTint="#A4FF84"
+        android:padding="5dp"
+        android:text="Bienvenue chez Visio"
+        android:textColor="#1C9391 "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Facebook"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/lnkdn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="LinkedIn"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="@+id/insta"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/insta"
+        app:layout_constraintTop_toBottomOf="@+id/insta" />
+
+    <EditText
+        android:id="@+id/insta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Instagram"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="@+id/fb"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="@+id/fb"
+        app:layout_constraintTop_toBottomOf="@+id/fb" />
+</androidx.constraintlayout.widget.ConstraintLayout>

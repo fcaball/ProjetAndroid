@@ -1,5 +1,8 @@
 package com.app.visio;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +10,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+
+import com.app.visio.model.gestion.Requete;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +70,31 @@ public class Connexion extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_connexion, container, false);
+    }
+
+    public void onClickContinuer(View v, ConnexionInscription activity) {
+        boolean canContinue=true;
+        EditText login = this.getView().findViewById(R.id.login);
+        EditText mdp = this.getView().findViewById(R.id.mdp);
+
+        login.setHintTextColor(Color.parseColor("#989595"));
+        mdp.setHintTextColor(Color.parseColor("#989595"));
+
+         if (login.getText().toString().compareTo("") == 0) {
+            login.setHintTextColor(Color.RED);
+            canContinue=false;
+        } else if (mdp.getText().toString().compareTo("") == 0) {
+            mdp.setHintTextColor(Color.RED);
+            canContinue=false;
+        }
+
+         if(canContinue){
+             ProgressBar progressBar = this.getView().findViewById(R.id.progressBar2);
+             progressBar.setVisibility(View.VISIBLE);
+             Requete lancerRequette= new Requete(activity);
+             lancerRequette.execute("verifyConnexion",login.getText().toString(),mdp.getText().toString());
+         }
+
+
     }
 }
