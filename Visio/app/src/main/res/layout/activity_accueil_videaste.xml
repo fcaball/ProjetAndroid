@@ -10,9 +10,11 @@
 
     <LinearLayout
         android:id="@+id/sep"
-        android:layout_width="400dp"
+        android:layout_width="0dp"
         android:layout_height="1dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:background="#1C9391"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,10 +47,10 @@
         android:textColor="#989595"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView2" />
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
+        android:id="@+id/header"
         android:name="com.app.visio.Header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -62,11 +64,70 @@
         android:layout_height="0dp"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="50dp"
+        android:onClick="onClickButtonAjouterContenu"
         android:src="@drawable/ajouterducontenu"
         app:layout_constraintBottom_toBottomOf="@+id/textContenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textContenu"
         app:layout_constraintTop_toTopOf="@+id/textContenu" />
+
+    <LinearLayout
+        android:id="@+id/buttonDeco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="8dp"
+        android:background="#D9D9D9"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iconlogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickDeconnexion"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/textlogout"
+                app:layout_constraintEnd_toStartOf="@+id/textlogout"
+                app:layout_constraintTop_toTopOf="@+id/textlogout"
+                app:srcCompat="@drawable/logout" />
+
+            <TextView
+                android:id="@+id/textlogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClickDeconnexion"
+                android:text="Déconnexion"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="606dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sep">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ensemble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

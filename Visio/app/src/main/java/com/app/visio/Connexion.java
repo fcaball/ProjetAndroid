@@ -1,8 +1,6 @@
 package com.app.visio;
 
 import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,13 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 
-import com.app.visio.model.gestion.Requete;
+import com.app.visio.model.gestion.Routeur;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -91,7 +86,7 @@ public class Connexion extends Fragment {
          if(canContinue){
              ProgressBar progressBar = this.getView().findViewById(R.id.progressBar2);
              progressBar.setVisibility(View.VISIBLE);
-             Requete lancerRequette= new Requete(activity);
+             Routeur lancerRequette= new Routeur(activity);
              lancerRequette.execute("verifyConnexion",login.getText().toString(),mdp.getText().toString());
          }
 

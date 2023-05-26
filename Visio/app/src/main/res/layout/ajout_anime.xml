@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/continuer2"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        android:background="#ECE7E7"
+        android:paddingStart="15dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Soumettre"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLien" />
+
+    <EditText
+        android:id="@+id/inputGenre2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#E9A6A2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHighlight="#A2CC93"
+        android:textColorHint="#85000000"
+        android:textColorLink="#A2CC93"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputGenre1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre 1 :"
+        android:textColor="#E9A6A2"
+        android:textColorHighlight="#E45252"
+        app:layout_constraintBottom_toTopOf="@+id/inputGenre1"
+        app:layout_constraintStart_toStartOf="@+id/inputGenre1" />
+
+    <EditText
+        android:id="@+id/inputGenre3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#E9A6A2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHighlight="#A2CC93"
+        android:textColorHint="#85000000"
+        android:textColorLink="#94A2D1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputGenre2" />
+
+    <EditText
+        android:id="@+id/inputLien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#E9A6A2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHighlight="#A2CC93"
+        android:textColorHint="#85000000"
+        android:textColorLink="#94A2D1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputGenre3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Titre"
+        android:textColor="#E9A6A2"
+        android:textColorHighlight="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/inputTitre"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E9A6A2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHighlight="#E9A6A2"
+        app:layout_constraintEnd_toEndOf="@+id/inputGenre1"
+        app:layout_constraintStart_toStartOf="@+id/inputGenre1"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/inputGenre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#E9A6A2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHighlight="#A2CC93"
+        android:textColorHint="#85000000"
+        android:textColorLink="#94A2D1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputTitre" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Synopsis"
+        android:textColor="#E9A6A2"
+        android:textColorHighlight="#E45252"
+        app:layout_constraintBottom_toTopOf="@+id/inputLien"
+        app:layout_constraintStart_toStartOf="@+id/inputLien" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre 3 :"
+        android:textColor="#E9A6A2"
+        android:textColorHighlight="#E45252"
+        app:layout_constraintBottom_toTopOf="@+id/inputGenre3"
+        app:layout_constraintStart_toStartOf="@+id/inputGenre3" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre 2 :"
+        android:textColor="#E9A6A2"
+        android:textColorHighlight="#E45252"
+        app:layout_constraintBottom_toTopOf="@+id/inputGenre2"
+        app:layout_constraintStart_toStartOf="@+id/inputGenre2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

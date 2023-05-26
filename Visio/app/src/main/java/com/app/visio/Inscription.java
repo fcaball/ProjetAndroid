@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.app.visio.model.gestion.Requete;
+import com.app.visio.model.gestion.Routeur;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -117,95 +117,9 @@ public class Inscription extends Fragment {
         if(canContinue){
             ProgressBar progressBar = this.getView().findViewById(R.id.progressBar2);
             progressBar.setVisibility(View.VISIBLE);
-            Requete lancerRequette= new Requete(activity);
+            Routeur lancerRequette= new Routeur(activity);
 
             lancerRequette.execute("verifyLogin",login.getText().toString());
-
-/*
-            EnvoiMail Email= new EnvoiMail(activity.getApplicationContext(),"curtix004@gmail.com","alexandre.fleury13@gmail.com","8/Cc2iG4","yo","hey");
-            Email.execute();*/
-
-          /*  String host = "mail.fabiencaballero.fr";
-            String port = "465";
-            String username = "contact@fabiencaballero.fr";
-            String password = "c2$&YY9tY3_YY9G2wY";
-
-            // Créer une propriété pour la session
-            Properties props = new Properties();
-            props.put("mail.smtp.host", host);
-            props.put("mail.smtp.port", port);
-            props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.ssl.enable", "true");
-
-            // Créer une session avec authentification
-            Session session = Session.getInstance(props, new Authenticator() {
-                @Override
-                protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication(username, password);
-                }
-            });
-
-            try {
-                // Créer un nouveau message
-                Message message = new MimeMessage(session);
-                message.setFrom(new InternetAddress(username));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("alexandre.fleury13@gmail.com"));
-                message.setSubject("RÉAGIS PAS");
-                message.setText("Fait le cri le plus bizarre possible !");
-
-                // Envoyer le message
-                Transport.send(message);
-
-                System.out.println("yoooo Le message a été envoyé avec succès.");
-            } catch (Exception ex) {
-                System.out.println("yoooo Une erreur s'est produite : " + ex.getMessage());
-                ex.printStackTrace();
-            }
-*/
-
-
-
-           /* Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("your_username@example.com"));
-            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("recipient@example.com"));
-            message.setSubject("Subject of the message");
-            message.setText("Content of the message");*/
-
-
-
-
-
-        /*    Random random = new Random();
-            Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.setType("message/rfc822");
-            intent.putExtra(Intent.EXTRA_EMAIL, new String[] {"curtix004.email@destinataire.com"});
-            intent.putExtra(Intent.EXTRA_SUBJECT, "Confirmation d'adresse");
-            intent.putExtra(Intent.EXTRA_TEXT, "Bienvenue chez Visio,\n vous avez plus qu'a confirmer votre adresse mail en tapant sur notre application le code suivant: \n"+random.nextInt(10)+" "+random.nextInt(10)+" "+random.nextInt(10)+" "+random.nextInt(10)+"\n\nCe message est envoyé automatiquement, merci de ne pas y répondre.");
-            startActivity(Intent.createChooser(intent, "Envoyer l'e-mail"));*/
-
-          /*  Dialog dialog = new Dialog(activity.getApplicationContext());
-            dialog.setContentView(R.layout.confirmation_mail);
-
-            Button positiveButton=(Button) dialog.findViewById(R.id.valider);
-            Button renvoyer=(Button) dialog.findViewById(R.id.renvoyer);
-
-            positiveButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
-
-            renvoyer.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
-
-            dialog.show();*/
-
-
         }
 
     }

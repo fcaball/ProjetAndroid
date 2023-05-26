@@ -117,5 +117,54 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="387dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        android:scrollbarStyle="insideOverlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="504dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ensemble"
+                android:layout_width="412dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="392dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:background="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listevisionnage">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#D9D9D9"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/filtre"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

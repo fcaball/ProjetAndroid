@@ -10,14 +10,14 @@
     tools:context=".Header">
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/compte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#A4FF84"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:srcCompat="@drawable/compte" />
 
     <ImageView
@@ -29,15 +29,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image" />
 
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:backgroundTint="#A4FF84"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:srcCompat="@drawable/loupe2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
