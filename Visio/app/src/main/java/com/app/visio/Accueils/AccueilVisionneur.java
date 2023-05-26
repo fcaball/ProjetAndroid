@@ -385,11 +385,11 @@ public class AccueilVisionneur extends AppCompatActivity {
 
         ArrayList<Integer> idSInliste = new ArrayList<>();
         for (int i = 0; i < seriesandanimInListe.size(); i++) {
-            idfsInliste.add(seriesandanimInListe.get(i).getIdS());
+            idSInliste.add(seriesandanimInListe.get(i).getIdS());
         }
 
         for (int i = 0; i < seriesandanim.size(); i++) {
-            if (idfsInliste.contains(seriesandanimInListe.get(i).getIdS())) {
+            if (idSInliste.contains(seriesandanimInListe.get(i).getIdS())) {
                 donneesSerie.add(seriesandanim.get(i));
             }
         }
