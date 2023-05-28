@@ -202,7 +202,7 @@ public class AccueilVisionneur extends AppCompatActivity {
             }
 
         }
-        afficherSelonFiltre(2);
+        //afficherSelonFiltre();
 
     }
 
@@ -308,6 +308,9 @@ public class AccueilVisionneur extends AppCompatActivity {
             CS.applyTo(cs);
             i++;
         }
+
+        afficherSelonFiltre();
+
     }
 
     void afficherSelonFiltre() {
@@ -316,6 +319,7 @@ public class AccueilVisionneur extends AppCompatActivity {
         ArrayList<Film> donneesFilm = new ArrayList<>();
         ArrayList<Serie> donneesSerie = new ArrayList<>();
         ArrayList<Integer> idfsInliste = new ArrayList<>();
+
         for (int i = 0; i < filmsandcourtmetragesInListe.size(); i++) {
             idfsInliste.add(filmsandcourtmetragesInListe.get(i).getIdF());
         }
@@ -325,6 +329,7 @@ public class AccueilVisionneur extends AppCompatActivity {
                 donneesFilm.add(filmsandcourtmetrages.get(i));
             }
         }
+
         for (int i = 0; i < donneesFilm.size(); i++) {
             LinearLayout layout = new LinearLayout(this);
             layout.setLayoutParams(new LinearLayout.LayoutParams(400, 400));
@@ -387,13 +392,11 @@ public class AccueilVisionneur extends AppCompatActivity {
         for (int i = 0; i < seriesandanimInListe.size(); i++) {
             idSInliste.add(seriesandanimInListe.get(i).getIdS());
         }
-
         for (int i = 0; i < seriesandanim.size(); i++) {
-            if (idSInliste.contains(seriesandanimInListe.get(i).getIdS())) {
+            if (idSInliste.contains(seriesandanim.get(i).getIdS())) {
                 donneesSerie.add(seriesandanim.get(i));
             }
         }
-
         for (int i = 0; i < donneesSerie.size(); i++) {
             LinearLayout layout = new LinearLayout(this);
             layout.setLayoutParams(new LinearLayout.LayoutParams(400, 400));
@@ -429,7 +432,7 @@ public class AccueilVisionneur extends AppCompatActivity {
             //nb.setLayoutParams(new LinearLayout.LayoutParams(800, 600));
             genre3.setId((int) 10 * i + 7);
             genre3.setTextColor(Color.BLACK);
-            genre3.setText(donneesSerie.get(i).getGenre2());
+            genre3.setText(donneesSerie.get(i).getGenre3());
             cs.addView(genre3);
 
             ConstraintSet CS = new ConstraintSet();
@@ -451,11 +454,6 @@ public class AccueilVisionneur extends AppCompatActivity {
 
             CS.applyTo(cs);
         }
+
     }
-
-
 }
-
-
-
-    }
